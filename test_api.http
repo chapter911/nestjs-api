@@ -1,2 +1,34 @@
 ###
 GET http://localhost:3000
+
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/99
+
+###
+GET http://localhost:3000/users/byQuery?role=admin
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Agung",
+    "email": "agung@example.com",
+    "role": "admin"
+}
+
+###
+PATCH http://localhost:3000/users/6
+content-type: application/json
+
+{
+    "name": "Mahaveer",
+    "email": "veer@example.com",
+    "role": "admin"
+}
+
+###
+DELETE http://localhost:3000/users/6
