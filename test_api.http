@@ -5,7 +5,7 @@ GET http://localhost:3000
 GET http://localhost:3000/users
 
 ###
-GET http://localhost:3000/users/99
+GET http://localhost:3000/users/2
 
 ###
 GET http://localhost:3000/users/byQuery?role=admin
@@ -15,13 +15,13 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Agung",
+    "name": "Test",
     "email": "agung@example.com",
     "role": "admin"
 }
 
 ###
-PATCH http://localhost:3000/users/6
+PATCH http://localhost:3000/users/2
 content-type: application/json
 
 {
@@ -31,4 +31,4 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/6
+DELETE http://localhost:3000/users/3
