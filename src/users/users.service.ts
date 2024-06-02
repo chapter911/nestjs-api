@@ -39,14 +39,14 @@ export class UsersService {
     }
 
     async login(user : any) {
-        const data = await this.prisma.user.findMany({
+        const data = await this.prisma.user.findFirst({
             where: {
                 email: user.email,
                 hashPwd: user.password,
             },
         });
-        if(data.length === 0) {
-            throw new NotFoundException(`User not found`);
+        if(!data || data.hashPwd !== user.password) {
+            throw new NotFoundException(`Wrong email or password`);
         }
         return data;
     }
@@ -57,7 +57,7 @@ export class UsersService {
                 data: {
                     name: createUserDto.name,
                     email: createUserDto.email,
-                    hashPwd: createUserDto.email,
+                    hashPwd: createUserDto.password,
                     role: createUserDto.role
                 }
             });
