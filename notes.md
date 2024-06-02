@@ -31,6 +31,9 @@ npm install @nestjs/config
 # Untuk mendukung fitur static file
 npm install --save @nestjs/serve-static
 
+# tambahkan cors untuk mengaktifkan cors di main.ts
+app.enableCors();
+
 # buat module users
 nest g module users
 
