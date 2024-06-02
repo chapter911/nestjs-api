@@ -11,6 +11,15 @@ GET http://localhost:3000/users/2
 GET http://localhost:3000/users/byQuery?role=admin
 
 ###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "email": "agung@example.com"
+}
+
+###
 POST http://localhost:3000/users
 Content-Type: application/json
 

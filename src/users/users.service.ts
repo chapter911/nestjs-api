@@ -38,6 +38,19 @@ export class UsersService {
         return user;
     }
 
+    async login(user : any) {
+        const data = await this.prisma.user.findMany({
+            where: {
+                email: user.email,
+                hashPwd: user.password,
+            },
+        });
+        if(data.length === 0) {
+            throw new NotFoundException(`User not found`);
+        }
+        return data;
+    }
+
     async create(createUserDto: CreateUserDto) {
         try {
             const user = await this.prisma.user.create({
