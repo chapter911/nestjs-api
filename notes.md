@@ -40,6 +40,7 @@ npm install --save @nestjs/serve-static
 
 # tambahkan cors untuk mengaktifkan cors di main.ts
 app.enableCors();
+ini sebelum app listen
 
 # buat module users
 nest g module users
@@ -51,6 +52,8 @@ nest g controller users
 nest g service users
 
 # update app.module.ts agar seluruh module dapat digunakan
+- copy src/prisma sesuai dengan format yang sudah ada
+- update app.module.ts sesuai dengan format yang sudah ada
 - jalankan kembali service apinya
 
 # untuk membuat contoh awal
