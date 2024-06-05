@@ -3,7 +3,7 @@ daftar perintah di terminal
 npm i -g @nestjs/cli
 
 # membuat project
-nest new nestjs-api1
+nest new nestjs-api-baru
 
 # untuk menjalankan nest js
 npm run start:dev
