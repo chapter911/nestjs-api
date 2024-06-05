@@ -2,6 +2,9 @@ daftar perintah di terminal
 # untuk menginstall nestjs
 npm i -g @nestjs/cli
 
+# membuat project
+nest new nestjs-api1
+
 # untuk menjalankan nest js
 npm run start:dev
 
