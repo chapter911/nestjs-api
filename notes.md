@@ -1,9 +1,9 @@
 daftar perintah di terminal
 # untuk menginstall nestjs
-npm i -g @nestjs/cli
+npm i -g @nestjs/cli --abaikan karena sudah pernah di install
 
 # membuat project
-nest new nestjs-api-baru
+nest new nest-api
 
 # untuk menjalankan nest js
 npm run start:dev
@@ -20,6 +20,7 @@ npm i prisma -D
 # gunakan jika tabel belum di buat :
 npx prisma init (sudah di pelajari)
 - update file .env untuk koneksi database
+  - DATABASE_URL="postgresql://postgres:P@ssw0rd@localhost:5432/training?schema=public"
 - update file schema.prisma untuk membuat tabel
 
 # jika tabel sudah dibuat :
@@ -27,6 +28,9 @@ npx prisma db pull (belum dipelajari, abaikan)
 
 # untuk create tabel
 npx prisma migrate dev --name init
+
+# buat folder prisma di dalam folder src
+- gunakan format yang sudah ada
 
 # Untuk mendukung fitur config
 npm install @nestjs/config
@@ -46,6 +50,9 @@ nest g controller users
 # buat service users
 nest g service users
 
+# update app.module.ts agar seluruh module dapat digunakan
+- jalankan kembali service apinya
+
 # untuk membuat contoh awal
 ketik ini terlebih dahulu di users.controller.ts :
 /*
@@ -58,6 +65,7 @@ ketik ini terlebih dahulu di users.controller.ts :
 */
 kemudian jalankan perintah AI
 make each function sebagai contoh sementara
+# PERHATIKAN HASILNYA BISA SAJA TIDAK SESUAI DENGAN KONDISI YANG MAU DI BUAT
 
 # buat folder dto di dalam folder users
 - gunakan format yang sudah ada
